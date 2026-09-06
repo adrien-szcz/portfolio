@@ -31,4 +31,5 @@ export type ProjectInfos = {
   image: string;
   description: ReactNode;
   skillsName: string[];
+  date: string;
 };

@@ -28,6 +28,11 @@ export const skillsData: SkillInfos[] = [
     icon: 'devicon-c-plain',
     technology: Technology.Programming,
   },
+  {
+    name: '.NET',
+    icon: 'devicon-dotnetcore-plain',
+    technology: Technology.Programming,
+  },
   
   // Web
   {
