@@ -4,18 +4,13 @@ import { Technology } from './type';
 export const skillsData: SkillInfos[] = [
   // Programming
   {
-    name: 'Python',
-    icon: 'devicon-python-plain',
-    technology: Technology.Programming,
-  },
-  {
     name: 'Java',
     icon: 'devicon-java-plain',
     technology: Technology.Programming,
   },
   {
-    name: 'JavaScript',
-    icon: 'devicon-javascript-plain',
+    name: 'Python',
+    icon: 'devicon-python-plain',
     technology: Technology.Programming,
   },
   {
@@ -33,15 +28,23 @@ export const skillsData: SkillInfos[] = [
     icon: 'devicon-c-plain',
     technology: Technology.Programming,
   },
-
-  // Database
-  {
-    name: 'MySQL',
-    icon: 'devicon-mysql-plain',
-    technology: Technology.Database,
-  },
-
+  
   // Web
+  {
+    name: 'HTML',
+    icon: 'devicon-html5-plain',
+    technology: Technology.Web,
+  },
+  {
+    name: 'CSS',
+    icon: 'devicon-css3-plain',
+    technology: Technology.Web,
+  },
+  {
+    name: 'TypeScript',
+    icon: 'devicon-typescript-plain',
+    technology: Technology.Web,
+  },
   {
     name: 'React',
     icon: 'devicon-react-original',
@@ -62,21 +65,23 @@ export const skillsData: SkillInfos[] = [
     icon: 'devicon-symfony-original',
     technology: Technology.Web,
   },
+  
+  // Database
   {
-    name: 'HTML',
-    icon: 'devicon-html5-plain',
-    technology: Technology.Web,
-  },
-  {
-    name: 'CSS',
-    icon: 'devicon-css3-plain',
-    technology: Technology.Web,
+    name: 'MySQL',
+    icon: 'devicon-mysql-plain',
+    technology: Technology.Database,
   },
 
   // Others
   {
     name: 'Git',
     icon: 'devicon-git-plain',
+    technology: Technology.Others,
+  },
+  {
+    name: 'Gitlab',
+    icon: 'devicon-gitlab-plain',
     technology: Technology.Others,
   },
   {

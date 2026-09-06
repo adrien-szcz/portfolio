@@ -1,14 +1,16 @@
+import type { ReactNode } from "react";
+
 export enum Technology {
   Programming = 'programming',
-  Database = 'database',
   Web = 'web',
+  Database = 'database',
   Others = 'others',
 }
 
 export enum TechnologyTitle {
   programming = 'Programming Languages',
-  database = 'Data Technologies',
   web = 'Web technologies',
+  database = 'Data Technologies',
   others = 'Others',
 }
 
@@ -24,10 +26,9 @@ export type SkillNameAndIcon = {
   icon: string;
 };
 
-
 export type ProjectInfos = {
   name: string;
   image: string;
-  description: string;
+  description: ReactNode;
   skillsName: string[];
 };
