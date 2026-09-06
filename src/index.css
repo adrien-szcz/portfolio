@@ -53,18 +53,16 @@
 }
 
 @theme {
-  --color-primary: var(--accent);
-  --color-secondary: var(--soft-accent);
-  --color-heading: var(--text-heading);
-  --color-primary-bg: var(--bg);
-  --color-secondary-bg: var(--soft-bg);
-}
-
-button {
-  background: var(--accent);
-  border: 1px solid var(--accent-border);
-}
-
-span {
-  color: var(--soft-accent)
+  --color-text: var(--text);
+  --color-text-heading: var(--text-heading);
+  --color-bg: var(--bg);
+  --color-soft-bg: var(--soft-bg);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-soft-accent: var(--soft-accent);
+  --color-accent-bg: var(--accent-bg);
+  --color-accent-border: var(--accent-border);
+  --color-code-bg: var(--code-bg);
+  --color-social-bg: var(--social-bg);
+  --color-shadow: var(--shadow);
 }
