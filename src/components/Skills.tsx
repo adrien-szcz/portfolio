@@ -9,13 +9,13 @@ const Skills: React.FC = () => {
 
     return (
         <div>
-            <div className="flex justify-center flex-wrap gap-8 m-8">
+            <div className="flex justify-center flex-wrap gap-4 md:gap-6 m-8">
                 {Object.values(Technology)
                 .map((tech) => (
                     <button
                         className={`
-                            rounded-2xl border border-transparent p-5 w-[15%] shadow-md hover:cursor-pointer hover:scale-105
-                            transition-all duration-300 ${ technology === tech ? 'bg-accent-bg' : 'bg-soft-bg border-transparent hover:border-accent-border'}
+                            rounded-2xl border border-transparent p-5 md:w-[30%] lg:w-[15%] text-xs md:text-base shadow-md hover:cursor-pointer hover:scale-105 transition-all duration-300 
+                            ${ technology === tech ? 'bg-accent-bg' : 'bg-soft-bg hover:inset-ring-2 hover:inset-ring-accent-border'}
                         `}
                         onClick={() => setTechnology(tech)}
                     >

@@ -22,11 +22,11 @@ const Projects: React.FC = () => {
 
             </div> */}
 
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center mt-5 gap-15">
                 {projectsData
                 //.filter((project) => )
                 .map((project) => (
-                    <Project name={project.name} image={project.image} description={project.description} skillsName={project.skillsName} />
+                    <Project name={project.name} image={project.image} description={project.description} skillsName={project.skillsName} date={project.date}/>
                 ))}
             </div>
         </div>
