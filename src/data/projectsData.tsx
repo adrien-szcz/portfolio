@@ -3,7 +3,7 @@ import type { ProjectInfos } from "../utils/types";
 export const projectsData: ProjectInfos[] = [
 	{
 		name: 'Genetics Game - Creature Simulation Engine',
-		image: '/projects/genetics_game.png',
+		image: `${import.meta.env.BASE_URL}/projects/genetics_game.png`,
 		description: (<>
 			<p>
 				A <strong>JavaFX desktop game</strong> where players collect, breed, and
@@ -18,7 +18,7 @@ export const projectsData: ProjectInfos[] = [
 			<p>
 				The project explores <strong>MVC architecture</strong>,
 				service layers, FXML, and <strong>data binding</strong> across a
-				multi-screen interface (lab, shop, arena).
+				multi-screen interface {"("} lab, shop, arena {")"}.
 			</p>
 		</>),
 		skillsName: ['Java', 'JavaFX', 'Scene Builder', 'Maven'],
@@ -26,7 +26,7 @@ export const projectsData: ProjectInfos[] = [
 	},
 	{
 		name: 'Machine Learning Internship - University of Tsukuba',
-		image: '/projects/machine_learning_internship.png',
+		image: `${import.meta.env.BASE_URL}/projects/machine_learning_internship.png`,
 		description: (<>
 			<p>
 				A <strong>machine learning project</strong> carried out at the
@@ -47,7 +47,7 @@ export const projectsData: ProjectInfos[] = [
 	},
 	{
 		name: 'BST vs AVL - Performance Analysis',
-		image: '/projects/bst_avl.png',
+		image: `${import.meta.env.BASE_URL}/projects/bst_avl.png`,
 		description: (<>
 			<p>
 				A <strong>Java project</strong> comparing Binary Search Trees (BST)
@@ -66,7 +66,7 @@ export const projectsData: ProjectInfos[] = [
 	},
 	{
 		name: 'Graph Software',
-		image: '/projects/graph_software.png',
+		image: `${import.meta.env.BASE_URL}/projects/graph_software.png`,
 		description: (<>
 			<p>
 				An <strong>interactive graph visualization tool</strong> designed to
@@ -90,7 +90,7 @@ export const projectsData: ProjectInfos[] = [
 	},
 	{
 		name: 'Academy of Doom',
-		image: '/projects/academy_of_doom.png',
+		image: `${import.meta.env.BASE_URL}/projects/academy_of_doom.png`,
 		description: (<>
 			<p>
 				A <strong>C#/.NET game development project</strong> where we took over
