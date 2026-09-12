@@ -1,19 +1,5 @@
 import type { ReactNode } from "react";
-
-export enum Technology {
-  Programming = 'programming',
-  Web = 'web',
-  Database = 'database',
-  Others = 'others',
-}
-
-export enum TechnologyTitle {
-  programming = 'Programming Languages',
-  web = 'Web technologies',
-  database = 'Data Technologies',
-  others = 'Others',
-}
-
+import type { Technology } from "./enums";
 
 export type SkillInfos = {
   name: string;
@@ -33,3 +19,7 @@ export type ProjectInfos = {
   skillsName: string[];
   date: string;
 };
+
+export type CubeProps = {
+  size: number;
+}

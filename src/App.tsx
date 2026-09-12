@@ -1,15 +1,21 @@
-import Skills from './components/Skills';
-import Projects from './components/Projects';
+import Cube from './components/Cube';
+import Projects from './components/project/Projects';
+
 
 import { BrowserRouter, Link } from 'react-router-dom';
+import Skills from './components/skill/Skills';
 
 function App() {
 
+
   return (
     <>
-      {/* Nav Bar */}
+      {/* Nav Bar / Header */}
       <BrowserRouter>
-        <nav className='fixed top-0 left-0 w-full z-50 flex items-center justify-between font-bold backdrop-blur-sm'>
+        <nav className='
+          fixed top-0 left-0 w-full z-50 font-bold font-heading
+          flex items-center justify-between backdrop-blur-sm 
+        '>
           <p className='text-2xl p-3'>Adrien Szczepaniak</p>
 
           <div className='flex gap-3 text-xl *:p-4 *:hover:text-text-heading'>
@@ -20,68 +26,96 @@ function App() {
         </nav>
       </BrowserRouter>
 
-      {/* Main Content*/}
-      <div className='pt-10 *:p-5 *:*:my-5'>
+      {/* Intro */}
+      <div className='h-svh'>
+        <h1 className='font-extrabold font-heading text-6xl text-center lg:text-left pt-50 mx-20'>
+          <span className='text-text-heading'>Curious by nature. Engineer by choice.</span>
+        </h1>
 
-        {/* Inro */}
-        <div className='*:mt-10 mx-15'>
-          <h1 className='font-bold text-6xl text-center lg:text-left'><span className='text-text-heading'>Welcome to my portfolio !</span></h1>
+        <div className='flex items-center justify-between gap-20 m-30'>
 
-          <h2>
-            Software Developer
-          </h2>
-          <p>
-            I build clean, well-structured software, with a focus on thoughtful design and practical solutions.
+          <div className='w-1/2'>
+            <h2 className='text-3xl font-bold mb-10'>
+              Software Developer
+            </h2>
 
-            My main background is in Java and object-oriented programming, while my projects have allowed me 
-            to explore different technologies and areas of development.
-          </p>
+            <p className='pl-5'>
+              I build clean, well-structured software, with a focus on thoughtful design and practical solutions.
+
+              My main background is in Java and object-oriented programming, while my projects have allowed me 
+              to explore different technologies and areas of development.
+            </p>
+          </div>
+
+          <div className='w-1/2 flex justify-center translate-10'>
+            <Cube></Cube>
+          </div>
 
         </div>
 
+      </div>
+
+      {/* Content*/}
+      <div className='*:p-5'>
+
         {/* Projects */}
         <div>
-          <h1 className='font-bold text-3xl'><span className='text-text-heading'>I.</span> Projects</h1>
+          <h1 className='font-bold text-3xl font-heading'>
+            <span className='text-text-heading'>I.</span> Projects
+          </h1>
 
           <Projects></Projects>
         </div>
 
         {/* Skills */}
         <div>
-          <h1 className='font-bold text-3xl'><span className='text-text-heading'>II.</span> Skills</h1>
+          <h1 className='font-bold text-3xl font-heading'>
+            <span className='text-text-heading'>II.</span> Skills
+          </h1>
 
           <Skills></Skills>
         </div>
 
         {/* About Me */}
         <div>
-          <h1 className='font-bold text-3xl'><span className='text-text-heading'>III.</span> About me</h1>
+          <h1 className='font-bold text-3xl font-heading'>
+            <span className='text-text-heading'>III.</span> About me
+          </h1>
 
-            <p>   
-              I am currently a third-year Software Engineering student at the IUT of Bordeaux, where I 
-              have developed a strong interest in software development and engineering. After completing 
-              my degree, I plan to pursue a Master's degree or an Engineering degree to continue my studies 
-              and reach a Bac+5 level.
-            </p>    
+            <div className='flex flex-wrap justify-center items mt-5 gap-1 *:mt-8 *:w-[60%]'>
 
-            <p>   
-              I enjoy turning complex problems into clear, well-designed software. I have developed a 
-              particular interest in software architecture and object-oriented programming, especially in 
-              thinking about how a system should be structured before writing the code itself.
-            </p>    
+              <p>   
+                I am currently a third-year Computer Science student at the IUT 
+                of Bordeaux, where I have developed a strong interest in 
+                software development and engineering. After completing my degree, 
+                I plan to pursue an Engineering degree to continue my studies and 
+                reach a Bac+5 level.
+              </p>    
 
-            <p>   
-              What motivates me most is learning by building. I enjoy breaking ideas down into smaller 
-              problems, experimenting with different approaches, and gradually turning them into something 
-              functional and maintainable.
-            </p>    
+              <p>   
+                I enjoy turning complex problems into clear, well-designed 
+                software. I have developed a particular interest in software 
+                architecture and object-oriented programming, especially in 
+                thinking about how a system should be structured before writing 
+                the code itself.
+              </p>    
 
-            <p>   
-              Beyond the technical side, I value curiosity, autonomy, and attention to detail. For me, 
-              programming is not only about making things work, but about understanding why they work and 
-              finding ways to make them better.
-            </p>    
+              <p>   
+                Beyond the technical side, I value curiosity, autonomy, and 
+                attention to detail. For me, programming is not only about making 
+                things work, but about understanding why they work and finding 
+                ways to make them better.
+              </p>    
 
+            </div>
+
+        </div>
+
+        {/* Footer */}
+        <div className='pt-10'>
+          <p className='text-sm text-right opacity-70'>
+            © 2026 Adrien Szczepaniak. All rights reserved.
+          </p>
         </div>
       </div>
     </>

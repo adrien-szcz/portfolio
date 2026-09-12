@@ -1,12 +1,13 @@
-import { projectsData } from "../utils/projectsData";
+
+import { projectsData } from "../../data/projectsData";
 import Project from "./Project";
 
 const Projects: React.FC = () => {
 
 
-    return (
-        <div>
-            {/* <div className="flex justify-center flex-wrap gap-8 m-8">
+	return (
+		<div>
+			{/* <div className="flex justify-center flex-wrap gap-8 m-8">
                 {Object.values(Technology)
                 .map((tech) => (
                     <button
@@ -22,15 +23,21 @@ const Projects: React.FC = () => {
 
             </div> */}
 
-            <div className="flex flex-wrap justify-center mt-5 gap-15">
-                {projectsData
-                //.filter((project) => )
-                .map((project) => (
-                    <Project name={project.name} image={project.image} description={project.description} skillsName={project.skillsName} date={project.date}/>
-                ))}
-            </div>
-        </div>
-    );
+			<div className="flex flex-wrap justify-center mt-5 gap-10">
+				{projectsData
+					//.filter((project) => )
+					.map((project) => (
+						<Project
+							name={project.name}
+							image={project.image}
+							description={project.description}
+							skillsName={project.skillsName}
+							date={project.date}
+						/>
+					))}
+			</div>
+		</div>
+	);
 };
 
 export default Projects;
