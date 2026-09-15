@@ -14,7 +14,7 @@ const Skills: React.FC = () => {
 				{Object.values(Technology)
 					.map((tech) => (
 						<button
-						key={tech}
+							key={tech}
 							className={`
 								rounded-2xl border border-transparent 
 								p-5 text-xs shadow-md 
@@ -36,7 +36,7 @@ const Skills: React.FC = () => {
 				{skillsData
 					.filter((skill) => skill.technology === technology)
 					.map((skill) => (
-							<Skill name={skill.name} icon={skill.icon}/>
+						<Skill name={skill.name} icon={skill.icon} />
 					))}
 			</div>
 

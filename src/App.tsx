@@ -1,40 +1,73 @@
 import Cube from './components/Cube';
 import Projects from './components/project/Projects';
 
-
 import { BrowserRouter, Link } from 'react-router-dom';
 import Skills from './components/skill/Skills';
+import { useState } from 'react';
 
 function App() {
 
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   return (
     <>
-      {/* Nav Bar / Header */}
-      <BrowserRouter>
-        <nav className='
-          fixed top-0 left-0 w-full z-50 font-bold font-heading
-          flex items-center justify-between backdrop-blur-sm 
-        '>
-          <p className='text-2xl p-3'>Adrien Szczepaniak</p>
 
-          <div className='flex gap-3 text-xl *:p-4 *:hover:text-text-heading'>
-            <Link to='mailto:szczepaniakadrien@gmail.com'>Mail</Link>
-            <Link to='https://github.com/adrien-szcz'>GitHub</Link>
-            <Link to='https://www.linkedin.com/in/adrien-szczepaniak/'>Linkedin</Link>
+      <BrowserRouter>
+        {/* Nav Bar */}
+        <nav className='
+          fixed top-0 left-0 w-full z-50
+          font-bold font-heading
+          backdrop-blur-sm
+        '>
+          <div className='flex items-center justify-between'>
+
+            <p className='text-2xl p-3'>Adrien Szczepaniak</p>
+
+            {/* Desktop Nav Bar */}
+            <div className='
+              hidden md:flex gap-3 text-2xl *:p-4 :hover:text-text-heading
+            '>
+              <Link to='mailto:szczepaniakadrien@gmail.com'>Mail</Link>
+              <Link to='https://github.com/adrien-szcz'>GitHub</Link>
+              <Link to='https://www.linkedin.com/in/adrien-szczepaniak/'>Linkedin</Link>
+            </div>
+
+            {/* Mobile Nav Bar */}
+            <button 
+              className="md:hidden text-3xl px-3"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              {menuOpen ? '×' : '☰'}
+            </button>
+
           </div>
+
+          {/* Mobile Menu */}
+          {menuOpen && (
+            <ul className='
+              md:hidden flex flex-col items-end
+              gap-2 px-5 pb-5 text-xl
+            '>
+              <li><Link to='mailto:szczepaniakadrien@gmail.com'>Mail</Link></li>
+              <li><Link to='https://github.com/adrien-szcz'>GitHub</Link></li>
+              <li><Link to='https://www.linkedin.com/in/adrien-szczepaniak/'>Linkedin</Link></li>
+            </ul>
+          )}
+
         </nav>
-      </BrowserRouter>
+            
+        </BrowserRouter>
+
 
       {/* Intro */}
-      <div className='h-svh'>
-        <h1 className='font-extrabold font-heading text-6xl text-center lg:text-left pt-50 mx-20'>
+      <div className='min-h-svh'>
+        <h1 className='font-extrabold font-heading text-6xl text-center lg:text-left pt-30 lg:pt-50 mx-20'>
           <span className='text-text-heading'>Curious by nature. Engineer by choice.</span>
         </h1>
 
-        <div className='flex items-center justify-between gap-20 m-30'>
+        <div className='flex items-center justify-between lg:gap-20 flex-col lg:flex-row m-15 lg:m-30'>
 
-          <div className='w-1/2'>
+          <div className='w-full lg:w-1/2'>
             <h2 className='text-3xl font-bold mb-10'>
               Software Developer
             </h2>
@@ -47,7 +80,7 @@ function App() {
             </p>
           </div>
 
-          <div className='w-1/2 flex justify-center translate-10'>
+          <div className='w-full lg:w-1/2 flex justify-center translate-10 scale-70 lg:scale-100'>
             <Cube></Cube>
           </div>
 
