@@ -11,7 +11,6 @@ function App() {
 
   return (
     <>
-
       <BrowserRouter>
         {/* Nav Bar */}
         <nav className='
@@ -37,7 +36,7 @@ function App() {
               className="md:hidden text-3xl px-3"
               onClick={() => setMenuOpen(!menuOpen)}
             >
-              {menuOpen ? '×' : '☰'}
+              {menuOpen ? 'x' : '☰'}
             </button>
 
           </div>
@@ -53,21 +52,20 @@ function App() {
               <li><Link to='https://www.linkedin.com/in/adrien-szczepaniak/'>Linkedin</Link></li>
             </ul>
           )}
-
+          
         </nav>
-            
-        </BrowserRouter>
+      </BrowserRouter>
 
 
       {/* Intro */}
       <div className='min-h-svh'>
-        <h1 className='font-extrabold font-heading text-6xl text-center lg:text-left pt-30 lg:pt-50 mx-20'>
+        <h1 className='font-extrabold font-heading text-6xl text-center lg:text-left pt-30 lg:pt-50 mx-5 lg:mx-20'>
           <span className='text-text-heading'>Curious by nature. Engineer by choice.</span>
         </h1>
 
         <div className='flex items-center justify-between lg:gap-20 flex-col lg:flex-row m-15 lg:m-30'>
 
-          <div className='w-full lg:w-1/2'>
+          <div className='w-full lg:w-1/2 max-w-2xl text-center lg:text-left '>
             <h2 className='text-3xl font-bold mb-10'>
               Software Developer
             </h2>
@@ -80,8 +78,8 @@ function App() {
             </p>
           </div>
 
-          <div className='w-full lg:w-1/2 flex justify-center translate-10 scale-70 lg:scale-100'>
-            <Cube></Cube>
+          <div className='w-full lg:w-1/2 overflow-visible flex justify-center translate-x-3 mt-20'>
+              <Cube></Cube>
           </div>
 
         </div>
